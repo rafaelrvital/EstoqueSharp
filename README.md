@@ -10,7 +10,7 @@ Desktop Inventory System
 
 </div><br>
 
-![Tag da Liguagem](https://img.shields.io/badge/VisualStudio-CSharp-orange)
+![Tag da Liguagem](https://img.shields.io/badge/Visual%20Studio-CSharp-orange)
 
 ## Description:
 

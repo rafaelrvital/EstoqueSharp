@@ -30,7 +30,7 @@ namespace EstoqueSharp
         {
             panelSubProduto.Visible = false;
             panelSubEstoque.Visible = false;
-            panelSubRecord.Visible = false;
+            panelSubConsulta.Visible = false;
             panelSubConfiguracoes.Visible = false;
         }
 
@@ -46,9 +46,9 @@ namespace EstoqueSharp
                 panelSubEstoque.Visible = false;
             }
 
-            if (panelSubRecord.Visible)
+            if (panelSubConsulta.Visible)
             {
-                panelSubRecord.Visible = false;
+                panelSubConsulta.Visible = false;
             }
 
             if (panelSubConfiguracoes.Visible)
@@ -81,9 +81,9 @@ namespace EstoqueSharp
             exibeMenu(panelSubEstoque);
         }
 
-        private void btnRecord_Click(object sender, EventArgs e)
+        private void btnConsulta_Click(object sender, EventArgs e)
         {
-            exibeMenu(panelSubRecord);
+            exibeMenu(panelSubConsulta);
         }
 
         private void btnConfiguracoes_Click(object sender, EventArgs e)

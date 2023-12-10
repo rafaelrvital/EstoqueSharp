@@ -35,10 +35,10 @@
             this.btnLoja = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
-            this.panelSubRecord = new System.Windows.Forms.Panel();
+            this.panelSubConsulta = new System.Windows.Forms.Panel();
             this.btnPDV = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.btnRecord = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.panelSubEstoque = new System.Windows.Forms.Panel();
             this.btnAjuste = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelSubConfiguracoes.SuspendLayout();
-            this.panelSubRecord.SuspendLayout();
+            this.panelSubConsulta.SuspendLayout();
             this.panelSubEstoque.SuspendLayout();
             this.panelSubProduto.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -74,8 +74,8 @@
             this.panelMenu.Controls.Add(this.btnSair);
             this.panelMenu.Controls.Add(this.panelSubConfiguracoes);
             this.panelMenu.Controls.Add(this.btnConfiguracoes);
-            this.panelMenu.Controls.Add(this.panelSubRecord);
-            this.panelMenu.Controls.Add(this.btnRecord);
+            this.panelMenu.Controls.Add(this.panelSubConsulta);
+            this.panelMenu.Controls.Add(this.btnConsulta);
             this.panelMenu.Controls.Add(this.btnFornecedor);
             this.panelMenu.Controls.Add(this.panelSubEstoque);
             this.panelMenu.Controls.Add(this.btnEstoque);
@@ -163,16 +163,16 @@
             this.btnConfiguracoes.UseVisualStyleBackColor = true;
             this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
-            // panelSubRecord
+            // panelSubConsulta
             // 
-            this.panelSubRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.panelSubRecord.Controls.Add(this.btnPDV);
-            this.panelSubRecord.Controls.Add(this.btnVendas);
-            this.panelSubRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubRecord.Location = new System.Drawing.Point(0, 620);
-            this.panelSubRecord.Name = "panelSubRecord";
-            this.panelSubRecord.Size = new System.Drawing.Size(183, 90);
-            this.panelSubRecord.TabIndex = 8;
+            this.panelSubConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
+            this.panelSubConsulta.Controls.Add(this.btnPDV);
+            this.panelSubConsulta.Controls.Add(this.btnVendas);
+            this.panelSubConsulta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubConsulta.Location = new System.Drawing.Point(0, 620);
+            this.panelSubConsulta.Name = "panelSubConsulta";
+            this.panelSubConsulta.Size = new System.Drawing.Size(183, 90);
+            this.panelSubConsulta.TabIndex = 8;
             // 
             // btnPDV
             // 
@@ -206,21 +206,21 @@
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
-            // btnRecord
+            // btnConsulta
             // 
-            this.btnRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecord.FlatAppearance.BorderSize = 0;
-            this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecord.ForeColor = System.Drawing.Color.White;
-            this.btnRecord.Location = new System.Drawing.Point(0, 575);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRecord.Size = new System.Drawing.Size(183, 45);
-            this.btnRecord.TabIndex = 7;
-            this.btnRecord.Text = "Record";
-            this.btnRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecord.UseVisualStyleBackColor = true;
-            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            this.btnConsulta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.ForeColor = System.Drawing.Color.White;
+            this.btnConsulta.Location = new System.Drawing.Point(0, 575);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnConsulta.Size = new System.Drawing.Size(183, 45);
+            this.btnConsulta.TabIndex = 7;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnFornecedor
             // 
@@ -486,7 +486,7 @@
             this.Text = "EstoqueSharp";
             this.panelMenu.ResumeLayout(false);
             this.panelSubConfiguracoes.ResumeLayout(false);
-            this.panelSubRecord.ResumeLayout(false);
+            this.panelSubConsulta.ResumeLayout(false);
             this.panelSubEstoque.ResumeLayout(false);
             this.panelSubProduto.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -513,9 +513,9 @@
         private System.Windows.Forms.Button btnAjuste;
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Button btnRecord;
+        private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Panel panelSubRecord;
+        private System.Windows.Forms.Panel panelSubConsulta;
         private System.Windows.Forms.Button btnPDV;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnSair;
