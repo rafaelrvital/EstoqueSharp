@@ -17,78 +17,50 @@ namespace EstoqueSharp
         SqlCommand cmd = new SqlCommand();
         DBConnect conn = new DBConnect();
 
+        bool ocultarCadastro = true;
+
         public Principal()
         {
             InitializeComponent();
-            defineMenu();
             cn = new SqlConnection(conn.myConnection());
             cn.Open();
-        }
 
-        #region panelMenu
-        private void defineMenu()
-        {
-            panelSubProduto.Visible = false;
-            panelSubEstoque.Visible = false;
-            panelSubConsulta.Visible = false;
-            panelSubConfiguracoes.Visible = false;
+            abreFormChild(new Inicio());
         }
 
         private void ocultaMenu()
-        { 
-            if (panelSubProduto.Visible)
-            {
-                panelSubProduto.Visible = false;
-            }
-
-            if (panelSubEstoque.Visible)
-            {
-                panelSubEstoque.Visible = false;
-            }
-
-            if (panelSubConsulta.Visible)
-            {
-                panelSubConsulta.Visible = false;
-            }
-
-            if (panelSubConfiguracoes.Visible)
-            {
-                panelSubConfiguracoes.Visible = false;
-            }
-        }
-
-        private void exibeMenu(Panel submenu)
         {
-            if (submenu.Visible == false)
-            {
-                ocultaMenu();
-                submenu.Visible = true;
-            }
-            else
-            {
-                submenu.Visible = false;
-            }
+            ocultarCadastro = true;
+            timerCadastro.Start();
         }
-        #endregion panelMenu
+
+        private Form activeForm = null;
+        public void abreFormChild(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            lblTitulo.Text = childForm.Text;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            exibeMenu(panelSubProduto);
-        }
-
-        private void btnEstoque_Click(object sender, EventArgs e)
-        {
-            exibeMenu(panelSubEstoque);
-        }
-
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-            exibeMenu(panelSubConsulta);
+            //exibeMenu(panelSubCadastro);
         }
 
         private void btnConfiguracoes_Click(object sender, EventArgs e)
         {
-            exibeMenu(panelSubConfiguracoes);
+            ocultaMenu();
         }
 
         private void btnListaProdutos_Click(object sender, EventArgs e)
@@ -99,6 +71,7 @@ namespace EstoqueSharp
         private void btnCategoria_Click(object sender, EventArgs e)
         {
             ocultaMenu();
+            abreFormChild(new UnidadeMedida());
         }
 
         private void btnMarca_Click(object sender, EventArgs e)
@@ -111,29 +84,65 @@ namespace EstoqueSharp
             ocultaMenu();
         }
 
-        private void btnAjuste_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            abreFormChild(new Inicio());
+            ocultaMenu();
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            timerCadastro.Start();
+        }
+
+        private void btnSaida_Click(object sender, EventArgs e)
         {
             ocultaMenu();
         }
 
-        private void btnVendas_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void timerCadastro_Tick(object sender, EventArgs e)
+        {
+            if (ocultarCadastro)
+            {
+
+                panelCadastro.Height -= 10;
+                if (panelCadastro.Height == panelCadastro.MinimumSize.Height)
+                {
+                    ocultarCadastro = false;
+                    timerCadastro.Stop();
+                }
+            }
+            else
+            {
+                panelCadastro.Height += 10;
+                if (panelCadastro.Height == panelCadastro.MaximumSize.Height)
+                {
+                    ocultarCadastro = true;
+                    timerCadastro.Stop();
+                }
+            }
+        }
+
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUnidadeMedida_Click(object sender, EventArgs e)
+        {
+            abreFormChild(new UnidadeMedida());
             ocultaMenu();
         }
 
-        private void btnPDV_Click(object sender, EventArgs e)
+        private void btnProduto_Click(object sender, EventArgs e)
         {
             ocultaMenu();
-        }
-
-        private void btnUsuario_Click(object sender, EventArgs e)
-        {
-            ocultaMenu();
-        }
-
-        private void btnLoja_Click(object sender, EventArgs e)
-        {
-            ocultaMenu();
+            abreFormChild(new Produto());
         }
     }
 }

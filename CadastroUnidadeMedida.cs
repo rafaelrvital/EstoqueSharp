@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EstoqueSharp
 {
-    public partial class Marca : Form
+    public partial class CadastroUnidadeMedida : Form
     {
-        public Marca()
+        public CadastroUnidadeMedida()
         {
             InitializeComponent();
         }

@@ -29,39 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroMarca));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelHeader = new System.Windows.Forms.Panel();
             this.picFechar = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.lblCdMarca = new System.Windows.Forms.Label();
+            this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFechar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.picFechar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 50);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Marca";
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(206)))), ((int)(((byte)(255)))));
+            this.panelHeader.Controls.Add(this.picFechar);
+            this.panelHeader.Controls.Add(this.label1);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(654, 41);
+            this.panelHeader.TabIndex = 0;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
+            this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseMove);
+            this.panelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseUp);
             // 
             // picFechar
             // 
@@ -73,6 +66,17 @@
             this.picFechar.TabIndex = 1;
             this.picFechar.TabStop = false;
             this.picFechar.Click += new System.EventHandler(this.picFechar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de Marca";
             // 
             // txtMarca
             // 
@@ -93,6 +97,7 @@
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label2
             // 
@@ -116,6 +121,7 @@
             this.btnAtualizar.TabIndex = 4;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnCancelar
             // 
@@ -130,6 +136,17 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblCdMarca
+            // 
+            this.lblCdMarca.AutoSize = true;
+            this.lblCdMarca.Location = new System.Drawing.Point(12, 107);
+            this.lblCdMarca.Name = "lblCdMarca";
+            this.lblCdMarca.Size = new System.Drawing.Size(87, 20);
+            this.lblCdMarca.TabIndex = 6;
+            this.lblCdMarca.Text = "cd_Marca";
+            this.lblCdMarca.Visible = false;
             // 
             // CadastroMarca
             // 
@@ -137,20 +154,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(654, 150);
+            this.Controls.Add(this.lblCdMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelHeader);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CadastroMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroMarca";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,13 +177,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox picFechar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.TextBox txtMarca;
+        public System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.Button btnAtualizar;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Label lblCdMarca;
     }
 }

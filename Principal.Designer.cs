@@ -28,41 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.panelSubConfiguracoes = new System.Windows.Forms.Panel();
-            this.btnLoja = new System.Windows.Forms.Button();
-            this.btnUsuario = new System.Windows.Forms.Button();
+            this.panelConfiguracoes = new System.Windows.Forms.Panel();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
-            this.panelSubConsulta = new System.Windows.Forms.Panel();
-            this.btnPDV = new System.Windows.Forms.Button();
-            this.btnVendas = new System.Windows.Forms.Button();
-            this.btnConsulta = new System.Windows.Forms.Button();
-            this.btnFornecedor = new System.Windows.Forms.Button();
-            this.panelSubEstoque = new System.Windows.Forms.Panel();
-            this.btnAjuste = new System.Windows.Forms.Button();
+            this.panelSaida = new System.Windows.Forms.Panel();
+            this.btnSaida = new System.Windows.Forms.Button();
+            this.panelEntrada = new System.Windows.Forms.Panel();
             this.btnEntrada = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
-            this.panelSubProduto = new System.Windows.Forms.Panel();
-            this.btnMarca = new System.Windows.Forms.Button();
-            this.btnCategoria = new System.Windows.Forms.Button();
-            this.btnListaProdutos = new System.Windows.Forms.Button();
-            this.btnProdutos = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.panelCadastro = new System.Windows.Forms.Panel();
+            this.btnProduto = new System.Windows.Forms.Button();
+            this.btnUnidadeMedida = new System.Windows.Forms.Button();
+            this.btnFornecedor = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblCargo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.timerCadastro = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
-            this.panelSubConfiguracoes.SuspendLayout();
-            this.panelSubConsulta.SuspendLayout();
-            this.panelSubEstoque.SuspendLayout();
-            this.panelSubProduto.SuspendLayout();
+            this.panelConfiguracoes.SuspendLayout();
+            this.panelSaida.SuspendLayout();
+            this.panelEntrada.SuspendLayout();
+            this.panelCadastro.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitulo.SuspendLayout();
@@ -71,17 +65,13 @@
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.panelMenu.Controls.Add(this.panelConfiguracoes);
+            this.panelMenu.Controls.Add(this.panelSaida);
+            this.panelMenu.Controls.Add(this.panelEntrada);
             this.panelMenu.Controls.Add(this.btnSair);
-            this.panelMenu.Controls.Add(this.panelSubConfiguracoes);
-            this.panelMenu.Controls.Add(this.btnConfiguracoes);
-            this.panelMenu.Controls.Add(this.panelSubConsulta);
-            this.panelMenu.Controls.Add(this.btnConsulta);
-            this.panelMenu.Controls.Add(this.btnFornecedor);
-            this.panelMenu.Controls.Add(this.panelSubEstoque);
-            this.panelMenu.Controls.Add(this.btnEstoque);
-            this.panelMenu.Controls.Add(this.panelSubProduto);
-            this.panelMenu.Controls.Add(this.btnProdutos);
-            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Controls.Add(this.panelCadastro);
+            this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -89,352 +79,231 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 661);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnSair
+            // panelConfiguracoes
             // 
-            this.btnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(0, 845);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(183, 45);
-            this.btnSair.TabIndex = 11;
-            this.btnSair.Text = "Sair";
-            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.UseVisualStyleBackColor = true;
-            // 
-            // panelSubConfiguracoes
-            // 
-            this.panelSubConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.panelSubConfiguracoes.Controls.Add(this.btnLoja);
-            this.panelSubConfiguracoes.Controls.Add(this.btnUsuario);
-            this.panelSubConfiguracoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubConfiguracoes.Location = new System.Drawing.Point(0, 755);
-            this.panelSubConfiguracoes.Name = "panelSubConfiguracoes";
-            this.panelSubConfiguracoes.Size = new System.Drawing.Size(183, 90);
-            this.panelSubConfiguracoes.TabIndex = 10;
-            // 
-            // btnLoja
-            // 
-            this.btnLoja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoja.FlatAppearance.BorderSize = 0;
-            this.btnLoja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoja.ForeColor = System.Drawing.Color.White;
-            this.btnLoja.Location = new System.Drawing.Point(0, 45);
-            this.btnLoja.Name = "btnLoja";
-            this.btnLoja.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnLoja.Size = new System.Drawing.Size(183, 45);
-            this.btnLoja.TabIndex = 6;
-            this.btnLoja.Text = "Loja";
-            this.btnLoja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoja.UseVisualStyleBackColor = true;
-            this.btnLoja.Click += new System.EventHandler(this.btnLoja_Click);
-            // 
-            // btnUsuario
-            // 
-            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuario.FlatAppearance.BorderSize = 0;
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnUsuario.Location = new System.Drawing.Point(0, 0);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUsuario.Size = new System.Drawing.Size(183, 45);
-            this.btnUsuario.TabIndex = 5;
-            this.btnUsuario.Text = "Usuário";
-            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.UseVisualStyleBackColor = true;
-            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            this.panelConfiguracoes.Controls.Add(this.btnConfiguracoes);
+            this.panelConfiguracoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConfiguracoes.Location = new System.Drawing.Point(0, 350);
+            this.panelConfiguracoes.Name = "panelConfiguracoes";
+            this.panelConfiguracoes.Size = new System.Drawing.Size(200, 45);
+            this.panelConfiguracoes.TabIndex = 5;
             // 
             // btnConfiguracoes
             // 
-            this.btnConfiguracoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
             this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfiguracoes.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 710);
+            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 0);
             this.btnConfiguracoes.Name = "btnConfiguracoes";
             this.btnConfiguracoes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnConfiguracoes.Size = new System.Drawing.Size(183, 45);
+            this.btnConfiguracoes.Size = new System.Drawing.Size(200, 45);
             this.btnConfiguracoes.TabIndex = 9;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.UseVisualStyleBackColor = false;
             this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
-            // panelSubConsulta
+            // panelSaida
             // 
-            this.panelSubConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.panelSubConsulta.Controls.Add(this.btnPDV);
-            this.panelSubConsulta.Controls.Add(this.btnVendas);
-            this.panelSubConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubConsulta.Location = new System.Drawing.Point(0, 620);
-            this.panelSubConsulta.Name = "panelSubConsulta";
-            this.panelSubConsulta.Size = new System.Drawing.Size(183, 90);
-            this.panelSubConsulta.TabIndex = 8;
+            this.panelSaida.Controls.Add(this.btnSaida);
+            this.panelSaida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSaida.Location = new System.Drawing.Point(0, 305);
+            this.panelSaida.Name = "panelSaida";
+            this.panelSaida.Size = new System.Drawing.Size(200, 45);
+            this.panelSaida.TabIndex = 5;
             // 
-            // btnPDV
+            // btnSaida
             // 
-            this.btnPDV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPDV.FlatAppearance.BorderSize = 0;
-            this.btnPDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPDV.ForeColor = System.Drawing.Color.White;
-            this.btnPDV.Location = new System.Drawing.Point(0, 45);
-            this.btnPDV.Name = "btnPDV";
-            this.btnPDV.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPDV.Size = new System.Drawing.Size(183, 45);
-            this.btnPDV.TabIndex = 6;
-            this.btnPDV.Text = "PDV";
-            this.btnPDV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPDV.UseVisualStyleBackColor = true;
-            this.btnPDV.Click += new System.EventHandler(this.btnPDV_Click);
+            this.btnSaida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.btnSaida.FlatAppearance.BorderSize = 0;
+            this.btnSaida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaida.ForeColor = System.Drawing.Color.White;
+            this.btnSaida.Location = new System.Drawing.Point(0, 0);
+            this.btnSaida.Name = "btnSaida";
+            this.btnSaida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSaida.Size = new System.Drawing.Size(200, 45);
+            this.btnSaida.TabIndex = 6;
+            this.btnSaida.Text = "Saída";
+            this.btnSaida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaida.UseVisualStyleBackColor = false;
+            this.btnSaida.Click += new System.EventHandler(this.btnSaida_Click);
             // 
-            // btnVendas
+            // panelEntrada
             // 
-            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendas.FlatAppearance.BorderSize = 0;
-            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendas.ForeColor = System.Drawing.Color.White;
-            this.btnVendas.Location = new System.Drawing.Point(0, 0);
-            this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnVendas.Size = new System.Drawing.Size(183, 45);
-            this.btnVendas.TabIndex = 5;
-            this.btnVendas.Text = "Vendas";
-            this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.UseVisualStyleBackColor = true;
-            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsulta.FlatAppearance.BorderSize = 0;
-            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta.ForeColor = System.Drawing.Color.White;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 575);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnConsulta.Size = new System.Drawing.Size(183, 45);
-            this.btnConsulta.TabIndex = 7;
-            this.btnConsulta.Text = "Consulta";
-            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
-            // 
-            // btnFornecedor
-            // 
-            this.btnFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFornecedor.FlatAppearance.BorderSize = 0;
-            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedor.Location = new System.Drawing.Point(0, 530);
-            this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnFornecedor.Size = new System.Drawing.Size(183, 45);
-            this.btnFornecedor.TabIndex = 6;
-            this.btnFornecedor.Text = "Fornecedor";
-            this.btnFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.UseVisualStyleBackColor = true;
-            // 
-            // panelSubEstoque
-            // 
-            this.panelSubEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.panelSubEstoque.Controls.Add(this.btnAjuste);
-            this.panelSubEstoque.Controls.Add(this.btnEntrada);
-            this.panelSubEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubEstoque.Location = new System.Drawing.Point(0, 440);
-            this.panelSubEstoque.Name = "panelSubEstoque";
-            this.panelSubEstoque.Size = new System.Drawing.Size(183, 90);
-            this.panelSubEstoque.TabIndex = 5;
-            // 
-            // btnAjuste
-            // 
-            this.btnAjuste.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAjuste.FlatAppearance.BorderSize = 0;
-            this.btnAjuste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjuste.ForeColor = System.Drawing.Color.White;
-            this.btnAjuste.Location = new System.Drawing.Point(0, 45);
-            this.btnAjuste.Name = "btnAjuste";
-            this.btnAjuste.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAjuste.Size = new System.Drawing.Size(183, 45);
-            this.btnAjuste.TabIndex = 6;
-            this.btnAjuste.Text = "Ajuste";
-            this.btnAjuste.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuste.UseVisualStyleBackColor = true;
-            this.btnAjuste.Click += new System.EventHandler(this.btnAjuste_Click);
+            this.panelEntrada.Controls.Add(this.btnEntrada);
+            this.panelEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEntrada.Location = new System.Drawing.Point(0, 260);
+            this.panelEntrada.Name = "panelEntrada";
+            this.panelEntrada.Size = new System.Drawing.Size(200, 45);
+            this.panelEntrada.TabIndex = 4;
             // 
             // btnEntrada
             // 
-            this.btnEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.btnEntrada.FlatAppearance.BorderSize = 0;
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
             this.btnEntrada.Location = new System.Drawing.Point(0, 0);
             this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEntrada.Size = new System.Drawing.Size(183, 45);
-            this.btnEntrada.TabIndex = 5;
+            this.btnEntrada.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnEntrada.Size = new System.Drawing.Size(200, 45);
+            this.btnEntrada.TabIndex = 4;
             this.btnEntrada.Text = "Entrada";
             this.btnEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrada.UseVisualStyleBackColor = true;
+            this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
-            // btnEstoque
+            // btnSair
             // 
-            this.btnEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEstoque.FlatAppearance.BorderSize = 0;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 395);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnEstoque.Size = new System.Drawing.Size(183, 45);
-            this.btnEstoque.TabIndex = 4;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.UseVisualStyleBackColor = true;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(0, 616);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSair.Size = new System.Drawing.Size(200, 45);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.Text = "Sair";
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // panelSubProduto
+            // panelCadastro
             // 
-            this.panelSubProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
-            this.panelSubProduto.Controls.Add(this.btnMarca);
-            this.panelSubProduto.Controls.Add(this.btnCategoria);
-            this.panelSubProduto.Controls.Add(this.btnListaProdutos);
-            this.panelSubProduto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubProduto.Location = new System.Drawing.Point(0, 260);
-            this.panelSubProduto.Name = "panelSubProduto";
-            this.panelSubProduto.Size = new System.Drawing.Size(183, 135);
-            this.panelSubProduto.TabIndex = 3;
+            this.panelCadastro.Controls.Add(this.btnProduto);
+            this.panelCadastro.Controls.Add(this.btnUnidadeMedida);
+            this.panelCadastro.Controls.Add(this.btnFornecedor);
+            this.panelCadastro.Controls.Add(this.btnCadastro);
+            this.panelCadastro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCadastro.Location = new System.Drawing.Point(0, 215);
+            this.panelCadastro.MaximumSize = new System.Drawing.Size(200, 180);
+            this.panelCadastro.MinimumSize = new System.Drawing.Size(200, 45);
+            this.panelCadastro.Name = "panelCadastro";
+            this.panelCadastro.Size = new System.Drawing.Size(200, 45);
+            this.panelCadastro.TabIndex = 4;
             // 
-            // btnMarca
+            // btnProduto
             // 
-            this.btnMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMarca.FlatAppearance.BorderSize = 0;
-            this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarca.ForeColor = System.Drawing.Color.White;
-            this.btnMarca.Location = new System.Drawing.Point(0, 90);
-            this.btnMarca.Name = "btnMarca";
-            this.btnMarca.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMarca.Size = new System.Drawing.Size(183, 45);
-            this.btnMarca.TabIndex = 5;
-            this.btnMarca.Text = "Marca";
-            this.btnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarca.UseVisualStyleBackColor = true;
-            this.btnMarca.Click += new System.EventHandler(this.btnMarca_Click);
+            this.btnProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.btnProduto.FlatAppearance.BorderSize = 0;
+            this.btnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduto.ForeColor = System.Drawing.Color.White;
+            this.btnProduto.Location = new System.Drawing.Point(0, 135);
+            this.btnProduto.MaximumSize = new System.Drawing.Size(200, 45);
+            this.btnProduto.Name = "btnProduto";
+            this.btnProduto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnProduto.Size = new System.Drawing.Size(200, 45);
+            this.btnProduto.TabIndex = 6;
+            this.btnProduto.Text = "Produto";
+            this.btnProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduto.UseVisualStyleBackColor = false;
+            this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
             // 
-            // btnCategoria
+            // btnUnidadeMedida
             // 
-            this.btnCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategoria.FlatAppearance.BorderSize = 0;
-            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnCategoria.Location = new System.Drawing.Point(0, 45);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCategoria.Size = new System.Drawing.Size(183, 45);
-            this.btnCategoria.TabIndex = 4;
-            this.btnCategoria.Text = "Categoria";
-            this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoria.UseVisualStyleBackColor = true;
-            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
+            this.btnUnidadeMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.btnUnidadeMedida.FlatAppearance.BorderSize = 0;
+            this.btnUnidadeMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnidadeMedida.ForeColor = System.Drawing.Color.White;
+            this.btnUnidadeMedida.Location = new System.Drawing.Point(0, 90);
+            this.btnUnidadeMedida.Name = "btnUnidadeMedida";
+            this.btnUnidadeMedida.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnUnidadeMedida.Size = new System.Drawing.Size(200, 45);
+            this.btnUnidadeMedida.TabIndex = 7;
+            this.btnUnidadeMedida.Text = "Unidade de medida";
+            this.btnUnidadeMedida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUnidadeMedida.UseVisualStyleBackColor = false;
+            this.btnUnidadeMedida.Click += new System.EventHandler(this.btnUnidadeMedida_Click);
             // 
-            // btnListaProdutos
+            // btnFornecedor
             // 
-            this.btnListaProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListaProdutos.FlatAppearance.BorderSize = 0;
-            this.btnListaProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnListaProdutos.Location = new System.Drawing.Point(0, 0);
-            this.btnListaProdutos.Name = "btnListaProdutos";
-            this.btnListaProdutos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnListaProdutos.Size = new System.Drawing.Size(183, 45);
-            this.btnListaProdutos.TabIndex = 3;
-            this.btnListaProdutos.Text = "Lista de Produtos";
-            this.btnListaProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListaProdutos.UseVisualStyleBackColor = true;
-            this.btnListaProdutos.Click += new System.EventHandler(this.btnListaProdutos_Click);
+            this.btnFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.btnFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedor.ForeColor = System.Drawing.Color.White;
+            this.btnFornecedor.Location = new System.Drawing.Point(0, 45);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFornecedor.Size = new System.Drawing.Size(200, 45);
+            this.btnFornecedor.TabIndex = 9;
+            this.btnFornecedor.Text = "Fornecedor";
+            this.btnFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFornecedor.UseVisualStyleBackColor = false;
+            this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
-            // btnProdutos
+            // btnCadastro
             // 
-            this.btnProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProdutos.FlatAppearance.BorderSize = 0;
-            this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnProdutos.Location = new System.Drawing.Point(0, 215);
-            this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnProdutos.Size = new System.Drawing.Size(183, 45);
-            this.btnProdutos.TabIndex = 2;
-            this.btnProdutos.Text = "Produtos";
-            this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdutos.UseVisualStyleBackColor = true;
-            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
+            this.btnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.ForeColor = System.Drawing.Color.White;
+            this.btnCadastro.Location = new System.Drawing.Point(0, 0);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnCadastro.Size = new System.Drawing.Size(200, 45);
+            this.btnCadastro.TabIndex = 2;
+            this.btnCadastro.Text = "Cadastro";
+            this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
-            // btnDashboard
+            // btnInicio
             // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 170);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(183, 45);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Location = new System.Drawing.Point(0, 170);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnInicio.Size = new System.Drawing.Size(200, 45);
+            this.btnInicio.TabIndex = 1;
+            this.btnInicio.Text = "Início";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.lblNome);
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
+            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Controls.Add(this.lblUsuario);
-            this.panelLogo.Controls.Add(this.lblCargo);
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(183, 170);
+            this.panelLogo.Size = new System.Drawing.Size(200, 170);
             this.panelLogo.TabIndex = 0;
             // 
-            // lblNome
+            // label1
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(6, 93);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(53, 20);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Nome";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-4, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "________________________";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(53, 118);
+            this.lblUsuario.Location = new System.Drawing.Point(60, 118);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(63, 20);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuário";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(27, 147);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(109, 20);
-            this.lblCargo.TabIndex = 0;
-            this.lblCargo.Text = "Administrador";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.TabIndex = 1;
@@ -442,6 +311,7 @@
             // 
             // panelTitulo
             // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(42)))));
             this.panelTitulo.Controls.Add(this.lblTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(200, 0);
@@ -451,7 +321,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(253, 10);
             this.lblTitulo.Name = "lblTitulo";
@@ -459,15 +329,22 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Título";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Visible = false;
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(200, 40);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(984, 621);
             this.panelMain.TabIndex = 2;
+            // 
+            // timerCadastro
+            // 
+            this.timerCadastro.Enabled = true;
+            this.timerCadastro.Interval = 10;
+            this.timerCadastro.Tick += new System.EventHandler(this.timerCadastro_Tick);
             // 
             // Principal
             // 
@@ -485,10 +362,10 @@
             this.Name = "Principal";
             this.Text = "EstoqueSharp";
             this.panelMenu.ResumeLayout(false);
-            this.panelSubConfiguracoes.ResumeLayout(false);
-            this.panelSubConsulta.ResumeLayout(false);
-            this.panelSubEstoque.ResumeLayout(false);
-            this.panelSubProduto.ResumeLayout(false);
+            this.panelConfiguracoes.ResumeLayout(false);
+            this.panelSaida.ResumeLayout(false);
+            this.panelEntrada.ResumeLayout(false);
+            this.panelCadastro.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -503,31 +380,24 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Panel panelSubProduto;
-        private System.Windows.Forms.Button btnMarca;
-        private System.Windows.Forms.Button btnCategoria;
-        private System.Windows.Forms.Button btnListaProdutos;
-        private System.Windows.Forms.Button btnProdutos;
-        private System.Windows.Forms.Panel panelSubEstoque;
-        private System.Windows.Forms.Button btnAjuste;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnEntrada;
-        private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Panel panelSubConsulta;
-        private System.Windows.Forms.Button btnPDV;
-        private System.Windows.Forms.Button btnVendas;
+        private System.Windows.Forms.Button btnSaida;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Panel panelSubConfiguracoes;
-        private System.Windows.Forms.Button btnLoja;
-        private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnConfiguracoes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timerCadastro;
+        private System.Windows.Forms.Button btnUnidadeMedida;
+        private System.Windows.Forms.Button btnProduto;
+        private System.Windows.Forms.Panel panelSaida;
+        private System.Windows.Forms.Panel panelCadastro;
+        private System.Windows.Forms.Panel panelConfiguracoes;
+        private System.Windows.Forms.Panel panelEntrada;
+        private System.Windows.Forms.Button btnFornecedor;
     }
 }
 
