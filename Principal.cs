@@ -130,7 +130,8 @@ namespace EstoqueSharp
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-
+            abreFormChild(new Fornecedor());
+            ocultaMenu();
         }
 
         private void btnUnidadeMedida_Click(object sender, EventArgs e)
@@ -141,8 +142,8 @@ namespace EstoqueSharp
 
         private void btnProduto_Click(object sender, EventArgs e)
         {
-            ocultaMenu();
             abreFormChild(new Produto());
+            ocultaMenu();
         }
     }
 }

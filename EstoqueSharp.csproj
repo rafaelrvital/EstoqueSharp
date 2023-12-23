@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroMarca.Designer.cs">
-      <DependentUpon>CadastroMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroProduto.Designer.cs">
-      <DependentUpon>CadastroProduto.cs</DependentUpon>
-    </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="Fornecedor.cs">
       <SubType>Form</SubType>
@@ -97,11 +85,8 @@
     <Compile Include="CadastroUnidadeMedida.Designer.cs">
       <DependentUpon>CadastroUnidadeMedida.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastroMarca.resx">
-      <DependentUpon>CadastroMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroProduto.resx">
-      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    <EmbeddedResource Include="Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

@@ -36,7 +36,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtUnidadeMedida = new System.Windows.Forms.TextBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFechar)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,9 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(335, 40);
             this.panelHeader.TabIndex = 7;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
+            this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseMove);
+            this.panelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseUp);
             // 
             // picFechar
             // 
@@ -63,6 +66,7 @@
             this.picFechar.Size = new System.Drawing.Size(30, 30);
             this.picFechar.TabIndex = 1;
             this.picFechar.TabStop = false;
+            this.picFechar.Click += new System.EventHandler(this.picFechar_Click);
             // 
             // label1
             // 
@@ -101,6 +105,7 @@
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label2
             // 
@@ -126,14 +131,15 @@
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtMarca
+            // txtUnidadeMedida
             // 
-            this.txtMarca.Location = new System.Drawing.Point(178, 62);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(145, 26);
-            this.txtMarca.TabIndex = 8;
+            this.txtUnidadeMedida.Location = new System.Drawing.Point(178, 62);
+            this.txtUnidadeMedida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUnidadeMedida.Name = "txtUnidadeMedida";
+            this.txtUnidadeMedida.Size = new System.Drawing.Size(145, 26);
+            this.txtUnidadeMedida.TabIndex = 8;
             // 
             // CadastroUnidadeMedida
             // 
@@ -146,7 +152,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtUnidadeMedida);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -169,6 +175,6 @@
         public System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnSalvar;
-        public System.Windows.Forms.TextBox txtMarca;
+        public System.Windows.Forms.TextBox txtUnidadeMedida;
     }
 }

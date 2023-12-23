@@ -1,3 +1,4 @@
+###### <div align=right>Change</div>
 <a href="https://github.com/rafaelrvital/EstoqueSharp/blob/main/README.md"><img src="https://github.com/rafaelrvital/rafaelrvital/blob/main/assets/flags/us.png" width="25" align="right" title="Change to english"></a>
 
 <br>
@@ -14,4 +15,6 @@ Sistema de Estoque para Desktop
 
 ## Descrição:
 
-Sistema de estoque para desktop construído em C#
+Sistema de estoque para desktop construído em C#, contendo interface moderna, menus deslisantes e manipulação de dados das tabelas relacionadas
+
+![](https://github.com/rafaelrvital/EstoqueSharp/Estoque.gif)

@@ -157,4 +157,28 @@
   <metadata name="timerCadastro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Iv///5v////i////RgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8m////oP////v////O////8P////////+q////AwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///yD///+R////+P///9P///9e////A////8X/////////////
+        /+3///86AAAAAAAAAAAAAAAA////If///5n////7////0f///17///8CAAAAAAAAAAD////E////////
+        /////////////v///6P///8C////rv////7///++////QQAAAAAAAAAAAAAAAAAAAAAAAAAA////xP//
+        ////////////////////////////8P////////9dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+        /8T/////////////////////////////////////////OwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD////E/////////////////////////////////////////zsAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA////xP////////////////////////////////////////87AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP///8n/////////8////83/////////////////////////OwAAAAAAAAAAAAAAAAAA
+        AAD///8N////Zf///6D///+c////4f////z///91////lv///////////////////zsAAAAAAAAAAP//
+        /zz///+W////l////z4AAAAAAAAAAP///wf///+H////9P////T///////////////////9H////Zv//
+        /6j///93////FwAAAAAAAAAA////B////1X///+Y////hf///zT///+Z////+v/////////6////8P//
+        /5T///8YAAAAAAAAAAD///83////j////5P///89////AQAAAAD///80////kf///+z////7////HP//
+        /4j////j////9f///8H///+x////Z////w8AAAAA////Ev///2b////E/////////9X///93////FgAA
+        AAAAAAAAAAAAAP///zz///+r////9////+L///+K////vP////3////Z////fP///x8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///xL///9w////yv///5b///85AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/h8AAPgHAADgAwAAgYAAAA+AAAA/gAAAP4AAAD+AAAA/gAAAPAAAADDAAAADAAAADBAAAACA
+        AADgBwAA+D8AAA==
+</value>
+  </data>
 </root>
