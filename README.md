@@ -17,4 +17,5 @@ Desktop Inventory System
 
 A desktop inventory system built in C#, containing modern interface, sliding menu and data manipulation from related tables
 
-![](https://github.com/rafaelrvital/EstoqueSharp/Estoque.gif)
+<p align="center">
+<img src="[https://c.tenor.com/p7IgwS17V0sAAAAC/rtj-rick-and-morty.gif](https://github.com/rafaelrvital/EstoqueSharp/Estoque.gif)https://github.com/rafaelrvital/EstoqueSharp/Estoque.gif" height="240" width="370">
