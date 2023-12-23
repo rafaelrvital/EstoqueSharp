@@ -17,4 +17,5 @@ Sistema de Estoque para Desktop
 
 Sistema de estoque para desktop construído em C#, contendo interface moderna, menus deslisantes e manipulação de dados das tabelas relacionadas
 
-![](https://github.com/rafaelrvital/EstoqueSharp/Estoque.gif)
+<p align="center">
+<img src="https://github.com/rafaelrvital/EstoqueSharp/blob/main/Estoque.gif" width="80%" height="80%">
